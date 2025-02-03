@@ -1,28 +1,30 @@
-import React from 'react';
-import clouds from '../assets/clouds.jpeg';
-import { loremIpsum } from 'lorem-ipsum';
+import React from 'react'
+import clouds from '../assets/clouds.jpeg'
+import background from '../assets/background.jpg'
+import { loremIpsum } from 'lorem-ipsum'
+import Card from '../components/Card'
 
-const Home = () => {
+export default function Home() {
   return (
-    <div className='flex items-center justify-center'>
-      <div className=' flex w-full card bg-base-100 shadow-xl hover:bg-base-200 m-10'>
-        <div className='contents '>
-          <img className='object-cover h-80 md: h-64' src={clouds} alt='clouds' />
-        </div>
-        <div className='card-body'>
-          <h2 className='card-title'>Welcome to my personal Website</h2>
-          <p>
-            {loremIpsum({
-              count: 20,
-            })}
-          </p>
-          <div className='card-actions justify-end'>
-            <button className='btn btn-primary'>Buy Now</button>
-          </div>
-        </div>
-      </div>
+    <div
+      className="portfolio bg-gray-100 portfolio bg-cover bg-center bg-fixed"
+      style={{ backgroundImage: `url(${background})` }}
+    >
+      <h1 className="text-center text-5xl font-bold py-10 ">
+        Welcome to My Portfolio
+      </h1>
+      <Card title="Test card" parallaxSpeed={-50} image={clouds}>
+        <p>{loremIpsum({ count: 3 })}</p>
+      </Card>
+      <Card title="My skills" parallaxSpeed={-100} image={clouds}>
+        <p>{loremIpsum({ count: 2 })}</p>
+      </Card>
+      <Card title="What I offer" parallaxSpeed={150} image={clouds}>
+        <p>{loremIpsum({ count: 3 })}</p>
+      </Card>
+      <Card title="References" parallaxSpeed={-200} image={clouds}>
+        <p>{loremIpsum({ count: 3 })}</p>
+      </Card>
     </div>
-  );
-};
-
-export default Home;
+  )
+}

@@ -1,0 +1,32 @@
+/* globals.css */
+
+/* Reset some default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    /* Set a global font */
+    background-color: #f8f8f8;
+    /* Light background color */
+    color: #333;
+    /* Dark text color */
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0;
+    padding: 0;
+}
+
+/* Smooth scroll (useful for scrolling across the whole page) */
+html {
+    scroll-behavior: smooth;
+}
