@@ -8,30 +8,25 @@ const Card = ({ title, parallaxSpeed, image, children }) => {
     offset: ['start end', 'end start'],
   })
 
-  // Parallax shift for the entire card
   const y = useTransform(scrollYProgress, [0, 1], [parallaxSpeed, -parallaxSpeed])
-
-  // Apple-style effects (scaling & fade)
   const scale = useTransform(scrollYProgress, [0, 1], [1.05, 1])
   const opacity = useTransform(scrollYProgress, [0, 1], [1, 0.85])
-
-  // Parallax effect for the image itself (subtle movement)
   const imageY = useTransform(scrollYProgress, [0, 1], [-20, 20])
 
   return (
     <section ref={ref} className="relative flex items-center justify-center">
       <motion.div
         style={{ y, scale, opacity }}
-        className="w-full max-w-4xl bg-white bg-opacity-60 shadow-2xl backdrop-blur-xl rounded-2xl overflow-hidden"
+        className="w-full max-w-3xl bg-white bg-opacity-60 shadow-2xl backdrop-blur-xl rounded-2xl overflow-hidden hover:shadow-3xl transition-all"
       >
         <motion.img
           style={{ y: imageY }}
-          className="object-cover h-96 md:h-80 w-full"
+          className="object-cover h-80 w-full"
           src={image}
           alt="card"
         />
         <div className="p-8 text-center">
-          <h2 className="text-4xl font-semibold tracking-tight">{title}</h2>
+          <h2 className="text-3xl font-semibold tracking-tight">{title}</h2>
           <p className="text-lg text-gray-700 mt-4">{children}</p>
         </div>
       </motion.div>
