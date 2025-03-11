@@ -26,16 +26,19 @@ export default function Home() {
       </header>
 
       {/* Cards */}
-      <section className="my-20 space-y-12">
-        <Card title="Web Development" parallaxSpeed={50} image="/assets/clouds.jpeg">
+      <section className="max-w-screen-lg mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-8 my-20">
+        <Card title="Coaching" image="/assets/clouds.jpeg">
+          Personal coaching to help you grow your faith and build a better
+          relationship with God.
+        </Card>
+        <Card title="Web Development" image="/assets/clouds.jpeg">
           Custom websites built with React, Next.js, and Tailwind.
         </Card>
-        <Card title="Design & Branding" parallaxSpeed={30} image="/assets/drops.jpg">
+        <Card title="Design & Branding" image="/assets/drops.jpg">
           Sleek, modern branding for startups and businesses.
         </Card>
       </section>
 
-      {/* Testimonials */}
       {/* Testimonials */}
       <section className="bg-gray-800 py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

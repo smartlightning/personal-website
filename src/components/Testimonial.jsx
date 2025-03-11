@@ -3,7 +3,7 @@ import { motion } from 'framer-motion'
 const Testimonial = ({ image, name, text }) => {
   return (
     <motion.div
-      whileHover={{ scale: 1.05 }}
+      whileHover={{ scale: 1.01 }}
       className="relative bg-gray-600 p-8 rounded-xl shadow-lg text-white text-center"
     >
       <img
